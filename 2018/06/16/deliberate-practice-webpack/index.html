@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css,总结," />
+  <meta name="keywords" content="前端工程化,webpack," />
 
 
 
@@ -84,18 +84,25 @@
 
 
 
-<meta name="description" content="css知识点总结（持续更新）">
+<meta name="description" content="最近在读《前端工程化》一书，对前端工程有了进一步认识，写点总结记录一下。由于平时主要使用命令行搭建工程（如vue-cli，create-react-app），对于一些配置文件不是很了解，此文使用webpack从零搭建搭建工程，方便以后工作中定制工程需求。
+
+前端工程化的目的12345解放生产力提高生产效率减少维护成本ci等等
+搭建前端工程常见的需求123451. 规范代码-eslint2.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css知识点总结">
-<meta property="og:url" content="http://yoursite.com/2018/05/08/css总结/index.html">
+<meta property="og:title" content="前端工程化-webpack">
+<meta property="og:url" content="http://yoursite.com/2018/06/16/deliberate-practice-webpack/index.html">
 <meta property="og:site_name" content="jvilee的博客">
-<meta property="og:description" content="css知识点总结（持续更新）">
-<meta property="og:image" content="https://s1.ax1x.com/2018/05/08/CaW9w4.png">
-<meta property="og:updated_time" content="2018-05-07T16:56:18.215Z">
+<meta property="og:description" content="最近在读《前端工程化》一书，对前端工程有了进一步认识，写点总结记录一下。由于平时主要使用命令行搭建工程（如vue-cli，create-react-app），对于一些配置文件不是很了解，此文使用webpack从零搭建搭建工程，方便以后工作中定制工程需求。
+
+前端工程化的目的12345解放生产力提高生产效率减少维护成本ci等等
+搭建前端工程常见的需求123451. 规范代码-eslint2.">
+<meta property="og:updated_time" content="2018-06-16T12:01:52.816Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css知识点总结">
-<meta name="twitter:description" content="css知识点总结（持续更新）">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/05/08/CaW9w4.png">
+<meta name="twitter:title" content="前端工程化-webpack">
+<meta name="twitter:description" content="最近在读《前端工程化》一书，对前端工程有了进一步认识，写点总结记录一下。由于平时主要使用命令行搭建工程（如vue-cli，create-react-app），对于一些配置文件不是很了解，此文使用webpack从零搭建搭建工程，方便以后工作中定制工程需求。
+
+前端工程化的目的12345解放生产力提高生产效率减少维护成本ci等等
+搭建前端工程常见的需求123451. 规范代码-eslint2.">
 
 
 
@@ -116,10 +123,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/08/css总结/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/16/deliberate-practice-webpack/"/>
 
 
-  <title> css知识点总结 | jvilee的博客 </title>
+  <title> 前端工程化-webpack | jvilee的博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +256,7 @@
             
             
               
-                css知识点总结
+                前端工程化-webpack
               
             
           </h1>
@@ -261,8 +268,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2018-05-08T00:05:15+08:00" content="2018-05-08">
-              2018-05-08
+            <time itemprop="dateCreated" datetime="2018-06-16T19:02:40+08:00" content="2018-06-16">
+              2018-06-16
             </time>
           </span>
 
@@ -289,7 +296,16 @@
       
 
       
-        <h3 id="css知识点总结（持续更新）"><a href="#css知识点总结（持续更新）" class="headerlink" title="css知识点总结（持续更新）"></a>css知识点总结（持续更新）</h3><p><img src="https://s1.ax1x.com/2018/05/08/CaW9w4.png" alt=""></p>
+        <blockquote>
+<p>最近在读《前端工程化》一书，对前端工程有了进一步认识，写点总结记录一下。由于平时主要使用命令行搭建工程（如vue-cli，create-react-app），对于一些配置文件不是很了解，此文使用webpack从零搭建搭建工程，方便以后工作中定制工程需求。</p>
+</blockquote>
+<h3 id="前端工程化的目的"><a href="#前端工程化的目的" class="headerlink" title="前端工程化的目的"></a>前端工程化的目的</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">解放生产力</div><div class="line">提高生产效率</div><div class="line">减少维护成本</div><div class="line">ci</div><div class="line">等等</div></pre></td></tr></table></figure>
+<h3 id="搭建前端工程常见的需求"><a href="#搭建前端工程常见的需求" class="headerlink" title="搭建前端工程常见的需求"></a>搭建前端工程常见的需求</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. 规范代码-eslint</div><div class="line">2. 进行javascript预处理</div><div class="line">3. 进行css预处理</div><div class="line">4. 自动编译</div><div class="line">5. 压缩合并静态资源文件</div></pre></td></tr></table></figure>
+<h3 id="webpack搭建工程具体实现"><a href="#webpack搭建工程具体实现" class="headerlink" title="webpack搭建工程具体实现"></a>webpack搭建工程具体实现</h3><blockquote>
+<p>webpack.config.js</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">var webpack = require(&apos;webpack&apos;);</div><div class="line">module.export = &#123;</div><div class="line">    entry: _dirname + &quot;/app/index.js&quot;, // 入口文件</div><div class="line">    output: &#123;</div><div class="line">        path: _dirname + &quot;/public&quot;, //输出文件路径</div><div class="line">        filename: &quot;bundle.js&quot;       //输出文件名</div><div class="line">    &#125;,</div><div class="line">    module: &#123;</div><div class="line">        loaders：[                  //加载器list</div><div class="line">            &#123;</div><div class="line">                test: /\.js$/,</div><div class="line">                excule: /node_modules/,</div><div class="line">                loader: &apos;babel&apos;, </div><div class="line">                query: &#123;</div><div class="line">                    presets: [</div><div class="line">                        &apos;es2015&apos;,</div><div class="line">                        &apos;react&apos;</div><div class="line">                    ]</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: /\.scss$/,</div><div class="line">                loader: &apos;style!css!postcss!sass&apos;</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">                test: /\.css$/,</div><div class="line">                loader: ExtractTextPlugin.extract(&apos;css&apos;)</div><div class="line">            &#125;</div><div class="line">        ],</div><div class="line">        postcss: function () &#123;</div><div class="line">            return [autoprefixer]</div><div class="line">        &#125;,</div><div class="line">        plugins: [</div><div class="line">            new webpack.optimize.UglifyJsPlugin(), //压缩代码</div><div class="line">            new webpack.DefinedPlugin(&#123;</div><div class="line">                &apos;process.env.NODE_ENV&apos; : &apos;production&apos;  // 见注1</div><div class="line">            &#125;),</div><div class="line">            new WebpackMd5Hash(),</div><div class="line">            new ExtractTextPlugin(&quot;bundle-[contenthash].css&quot;) // 根据hash值进行缓存控制静态资源css文件</div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    devServer: &#123;                    //web server 配置</div><div class="line"></div><div class="line">        contentBase： &quot;./public&quot;,</div><div class="line">        inline: true               </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这只是使用webpack的一些基本功能，以后会继续学习总结</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -312,9 +328,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag">#css</a>
+            <a href="/tags/前端工程化/" rel="tag">#前端工程化</a>
           
-            <a href="/tags/总结/" rel="tag">#总结</a>
+            <a href="/tags/webpack/" rel="tag">#webpack</a>
           
         </div>
       
@@ -323,17 +339,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/15/living/" rel="next" title="终身学习，每周打call">
-                <i class="fa fa-chevron-left"></i> 终身学习，每周打call
+              <a href="/2018/05/08/css总结/" rel="next" title="css知识点总结">
+                <i class="fa fa-chevron-left"></i> css知识点总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/16/deliberate-practice-webpack/" rel="prev" title="前端工程化-webpack">
-                前端工程化-webpack <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -460,7 +472,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css知识点总结（持续更新）"><span class="nav-number">1.</span> <span class="nav-text">css知识点总结（持续更新）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端工程化的目的"><span class="nav-number">1.</span> <span class="nav-text">前端工程化的目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建前端工程常见的需求"><span class="nav-number">2.</span> <span class="nav-text">搭建前端工程常见的需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack搭建工程具体实现"><span class="nav-number">3.</span> <span class="nav-text">webpack搭建工程具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
         </section>
